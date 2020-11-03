@@ -1,5 +1,6 @@
 var inquirer = require("inquirer");
-
+var fs = require('fs');
+var generateMarkdown =require("./utils/generateMarkdown");
 // array of questions for user
 const questions = [
 //enter project title
@@ -96,21 +97,27 @@ const questions = [
 ];
 
 // function to write README file
-/*function writeToFile(fileName, data) {
-}*/
+function saveReadMe(contents) {
+    fs.writeFileSync("./results/README.md", contents, { encoding: 'utf8', flag: 'w' })
+    console.log("success")
+}
 
 // function to initialize program
 function init() {
     inquirer
         .prompt(questions)
         .then(answers => {
-            console.log(JSON.stringify(answers, null, '  '));
+            //console.log(JSON.stringify(answers, null, '  '));
+            const readme=generateMarkdown(answers);
+            saveReadMe(readme);
         })
         .catch(error => {
             if (error.isTtyError) {
                 // Prompt couldn't be rendered in the current environment
+                console.log(error)
             } else {
                 // Something else when wrong
+                console.log(error)
             }
         });
 }
