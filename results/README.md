@@ -26,12 +26,7 @@ Simply clone this repository locally, install the dependencies (npm install), an
 
 ## Usage
 To use this tool, run the program using "node index.js" while in the root directory. The program will prompt you in the command line for what you'd like to see for each of the typical sections of a README: Description, Installation, Usage, Contributing, Tests, License, and Questions. When completed, the README.md file will be located in the /results directory.
-</br>
-</br>
-![screenshot of CLI in use](https://user-images.githubusercontent.com/64562938/98024828-7f3b6700-1dce-11eb-859c-34bbc39d82ca.png)
-</br>
-</br>
-[Link to Walkthrough Video](https://drive.google.com/file/d/1Vu4oUWpyk6S2m4FTAoKn1jwTPX4R6MxB/view)
+
 </br>
 
 ## Contributing
